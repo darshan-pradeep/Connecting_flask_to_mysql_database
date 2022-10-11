@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+
+{% block title %}
+Users Page
+{% endblock title %}
+
+
+
+{% block body %}
+<div class="container text-center">
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Sno</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Email ID</th>
+        </tr>
+    </thead>
+        <tbody>
+    {% for user_detail in user_details %}
+        
+                <tr>
+                    <th scope="row">{{loop.index}}</th>
+                    <td>{{user_detail[0]}}</td>
+                    <td>{{user_detail[1]}}</td>
+                </tr>
+                {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock body %}

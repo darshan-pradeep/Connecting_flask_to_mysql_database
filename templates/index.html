@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Home Page
+{% endblock title %}
+
+
+{% block body %}
+<div class="container mb-2"><h1>Login Form</h1></div>
+<div class="container">
+  <form method="post" action="/">
+    <div class="mb-3">
+      <label for="emailid" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="emailid" name="emailid" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="username" class="form-label">username</label>
+      <input type="text" class="form-control" name="username" id="username">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+{% endblock body %}
